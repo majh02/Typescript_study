@@ -1,18 +1,18 @@
-function add(n1: number, n2: number): number {
-    // The key difference is: Javascript uses "dynamic types" (resolved at runtime)
-    // TypeScript uses "static types" (set during development)
-    // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
-    //     throw new Error('Incorrect input!');
-    // }
-    
-    return n1 + n2
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Max';
+
+// unknown: 문자열을 받으려 하는 변수에 할당하기 전에 
+// 먼저 userInput에 담긴 값의 타입을 확인함
+// userName = userInput; // ERROR
+if(typeof userInput === 'string') {
+    userName = userInput;
 }
 
-const number1= 5;
-const number2 = 2.8;
+function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code };
+}
 
-const result = add(number1, number2);
-
-console.log(result);
-// Typescript's type system only helps you during development.
-// ex. before the code get compiled.
+generateError('An error occured!', 500);
