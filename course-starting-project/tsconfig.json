@@ -1,10 +1,25 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "ES5",
+        "target": "ES6",    // 어떤 자바스크립트 버전으로 TS 컴파일할건지
+        "lib": [
+            "dom", 
+            "es6",
+            "DOM.Iterable",
+            "ScriptHost"
+        ], // 기본값
         "sourceMap": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        // "rootDir": "src",
+        "removeComments": true, // JS 파일 TS 주석 제거하고 생성
+        "noEmitOnError": true, // TS 파일에 오류가 있으면 JS 파일 생성되지 않음
+        // "strict": true, // 데이터에 대해 정확히하도록 함
+
+        // 코드 품질 관련
+        "noUnusedLocals": true, // 사용하지 않는 로컬 변수 오류
+        "noUnusedParameters": true, // 사용하지 않는 매개변수 오류
+        "noImplicitReturns": true,  // return 없을때 오류
     },
-    "include": ["./"],
-    "exclude": ["node_modules"]
+    "include": ["./"],          // 컴파일 포함
+    "exclude": ["node_modules"] // 컴파일 제외
 }

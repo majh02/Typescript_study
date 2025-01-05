@@ -1,4 +1,4 @@
-function add(n1: number, n2: number, showResult: boolean, resultPhrase: string): number {
+function add(n1: number, n2: number, showResult: boolean, resultPhrase: string) {
     // The key difference is: Javascript uses "dynamic types" (resolved at runtime)
     // TypeScript uses "static types" (set during development)
     // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
@@ -8,6 +8,7 @@ function add(n1: number, n2: number, showResult: boolean, resultPhrase: string):
     const result = n1 + n2;
     if(showResult) {
         console.log(resultPhrase + result); 
+        return 0;
     } else {
         return result;
     }

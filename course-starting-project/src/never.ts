@@ -11,6 +11,7 @@ if(typeof userInput === 'string') {
     userName = userInput;
 }
 
+// never: 절대 반환값을 생성하지 않음
 function generateError(message: string, code: number): never {
     throw { message: message, errorCode: code };
 }
