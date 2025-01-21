@@ -1,20 +1,7 @@
-let appId = 'abc';
-const button = document.querySelector('button')!;
+// next gen js --> es6 이후
 
-function add_(n1: number, n2:number) {
-    if(n1 + n2 > 0) {
-        return n1 + n2;
-    }
-    return 0;
-}
+const userName_ = 'Max';
+// userName_ = 'Maximilian';
+let age = 20;
+age = 29;
 
-function clickHandler(messgage: string) {
-    console.log("Clicked! ", messgage);
-    
-}
-
-if(button) {
-    button.addEventListener('click', () => {
-        clickHandler('button!!');
-    })
-}

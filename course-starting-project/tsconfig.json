@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "jsx": "react",
         "module": "commonjs",
         "target": "ES6",    // 어떤 자바스크립트 버전으로 TS 컴파일할건지
         "lib": [
